@@ -374,7 +374,7 @@
           <div class="col acc"><h3>Contexto <small>inferencia</small></h3>
             <ul><li>Se arma en cada decisión</li><li>Datos del cliente, de hoy</li><li>Propio: distinto en cada institución</li></ul></div>
         </div>
-        <div class="trejo" data-step-hide="2"><div data-step="1">«El modelo se puede replicar. Los datos no.» <span class="mono-f faint" style="font-size:22px">A. Trejo</span>
+        <div class="trejo" data-step-hide="2"><div data-step="1">Se suele decir: «el modelo se replica, los datos no».
           <span class="dim">Más preciso: se replican los <em>pesos</em>. No se replica el <em>contexto</em>.</span></div></div>
         <div class="alt" data-step="2">
           <div class="c-box"><div class="t-label">En el caso</div><div class="tx">Historial de transferencias, dispositivo, cambio de SIM, beneficiario. Quien no puede leerlos decide a ciegas.</div></div>
@@ -386,7 +386,7 @@
         <p>Concepto tres: contexto. Aquí hay una confusión muy común y quiero ser preciso. Un modelo tiene dos fuentes de conocimiento. Los pesos: lo que aprendió al entrenarse, una vez, con datos públicos o licenciados. Y el contexto: lo que le pones enfrente en el momento de decidir.</p>
         <p>Los pesos se rentan. El modelo que uso yo es el mismo que puede rentar una fintech mañana. El contexto no: son los datos de este cliente, de hoy.</p>
         <p class="dir">[Clic.]</p>
-        <p>Andrés escribió: el modelo se puede replicar, los datos no. Yo lo afinaría: se replican los pesos, no el contexto. Los acuerdos de Reddit o de Scale son por datos de entrenamiento. En banca agéntica la pelea es por datos de inferencia.</p>
+        <p>Se suele decir que el modelo se replica y los datos no. Yo lo afinaría: se replican los pesos, no el contexto. Los acuerdos de Reddit o de Scale son por datos de entrenamiento. En banca agéntica la pelea es por datos de inferencia.</p>
         <p class="dir">[Clic.]</p>
         <p>En el caso, el contexto es el historial, el dispositivo, la SIM. Y un riesgo: todo lo que entra al contexto puede influir. El concepto de pago lo escribe el defraudador. Los datos no deben poder dar órdenes. ¿Y quién tiene derecho a ese contexto?</p>`,
     },

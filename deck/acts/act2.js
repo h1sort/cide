@@ -60,10 +60,10 @@
 
   const SCALE = `
     <div class="lab-scale">
-      <div class="lv"><div class="f">0</div><div class="nm">Sin agente</div><div class="d">Lo hace una persona</div></div>
-      <div class="lv"><div class="f">1</div><div class="nm">Propone</div><div class="d">Un humano aprueba antes</div></div>
-      <div class="lv"><div class="f">2</div><div class="nm">Ejecuta</div><div class="d">Un humano revisa después</div></div>
-      <div class="lv"><div class="f">3</div><div class="nm">Ejecuta solo</div><div class="d">Nadie revisa cada caso</div></div>
+      <div class="lv"><div class="f">0</div><div class="nm">Sin agente</div><div class="d">Sentados, manos abajo</div></div>
+      <div class="lv"><div class="f">1</div><div class="nm">Aprueba antes</div><div class="d">Mano al hombro</div></div>
+      <div class="lv"><div class="f">2</div><div class="nm">Revisa después</div><div class="d">Brazo arriba</div></div>
+      <div class="lv"><div class="f">3</div><div class="nm">Ejecuta solo</div><div class="d">De pie, brazo arriba</div></div>
     </div>`;
 
   const CASES = [
@@ -86,11 +86,11 @@
         <div class="t-label" style="margin-bottom:18px">Laboratorio · seis casos</div>
         <h2>¿Quién aprueba?</h2>
         ${SCALE}
-        <p class="hint" data-step="1">Voten con la mano: <span class="accent">puño = 0</span>, un dedo, dos o tres.</p>`,
+        <p class="hint" data-step="1">La altura es la autonomía. <span class="accent">La sala se vuelve un histograma.</span></p>`,
       notes: `
-        <p>Laboratorio. Ya tienen el vocabulario, ahora úsenlo. Seis casos, uno por uno, y la pregunta siempre es la misma: ¿quién aprueba? Puño cerrado: sin agente, lo hace una persona. Un dedo: el agente propone y un humano aprueba antes. Dos: el agente ejecuta y un humano revisa después. Tres: ejecuta solo, y nadie revisa cada caso; se audita por muestreo.</p>
+        <p>Laboratorio. Ya tienen el vocabulario, ahora úsenlo. Seis casos, uno por uno, y la pregunta siempre es la misma: ¿quién aprueba? Y votan con la altura. Sentados con las manos abajo: sin agente, lo hace una persona. Mano al hombro: el agente propone y un humano aprueba antes. Brazo arriba: el agente ejecuta y un humano revisa después. De pie con el brazo arriba: ejecuta solo, nadie revisa cada caso.</p>
         <p class="dir">[Clic.]</p>
-        <p>Esta vez la escala sí es ordenada: de menos a más autonomía. Piensen en los dos ejes: qué efecto tiene la acción y qué tan caro es el error. Cuando la sala se divida, le pido a alguien de cada lado que defienda su voto. Christian, tú también votas. Primer caso.</p>`,
+        <p>La altura es la autonomía: la sala se vuelve un histograma. Piensen en los dos ejes: qué efecto tiene la acción y qué tan caro es el error. Los que estén de pie defienden su voto. Christian, tú también votas. Primer caso.</p>`,
     },
     {
       id: 'lab-casos',
@@ -104,9 +104,9 @@
         <div class="cases">
           ${CASES.map(([tx, sm], i) => `<div class="cs" data-step-only="${i + 1}"><div class="n">Caso 0${i + 1} · de 06</div><div class="tx">${tx}</div><div class="sm">${sm}</div></div>`).join('')}
         </div>
-        <div class="mini"><div><span>0</span>Sin agente</div><div><span>1</span>Aprueba antes</div><div><span>2</span>Revisa después</div><div><span>3</span>Ejecuta solo</div></div>`,
+        <div class="mini"><div><span>0</span>Sentados</div><div><span>1</span>Mano al hombro</div><div><span>2</span>Brazo arriba</div><div><span>3</span>De pie</div></div>`,
       notes: `
-        <p class="dir">[Un clic por caso. En cada uno: "¡voten!", contar, y si la sala se divide, una persona de cada lado defiende. ~1:40 por caso. Si vamos tarde, saltar el 04 y el 05.]</p>
+        <p class="dir">[Un clic por caso. En cada uno: "¡voten!", leer el horizonte en voz alta ("casi todos al hombro, tres de pie"), y los de pie o los del extremo opuesto defienden. Tomar foto de un caso dividido. ~1:40 por caso. Si vamos tarde, saltar el 04 y el 05.]</p>
 <p><b>01 · Comisión.</b> Mi voto: 3. Es lectura; el riesgo es que invente, así que responde citando el contrato o no responde, y se audita por muestreo.</p>
         <p><b>02 · Tarjeta robada.</b> Mi voto: 3. Congelar es reversible y esperar es caro. Aquí la autonomía protege al cliente.</p>
         <p><b>03 · Crédito.</b> Mi voto: 1. Es calificar a una persona; en Europa es alto riesgo, y la explicación del modelo no es la causa.</p>
@@ -158,7 +158,7 @@
           <li data-step="3"><span class="n">03</span><span class="tx">Si un banco y una fintech tuvieran exactamente los mismos datos, ¿quién construye el mejor producto y por qué?</span></li>
           <li data-step="4"><span class="n">04</span><span class="tx">¿Cuánto vale un dato que el cliente decide compartir, y qué tiene que recibir a cambio?</span></li>
         </ul>
-        <div class="cite src">Preguntas: Andrés Trejo, invitación a este taller</div>`,
+        <div class="cite src">Preguntas de la invitación a este taller</div>`,
       notes: `
         <p class="dir">[Pasarle la palabra a Christian. Él modera; yo respondo. Revelar cada pregunta solo si la sala se queda callada.]</p>
         <p>Christian, tú estuviste a cargo de open banking del otro lado de la calle, así que te toca la parte incómoda.</p>
@@ -238,7 +238,7 @@
           <li><b>Atribución de mensajes automáticos.</b> Código de Comercio, art. 90, fracc. III.</li>
           <li><b>Riesgo de modelos.</b> Fed, OCC y FDIC, SR 26-2 (17 abr. 2026), nota 3; sustituye a SR 11-7.</li>
           <li><b>Alto riesgo en crédito.</b> Reglamento (UE) 2024/1689, anexo III, punto 5(b).</li>
-          <li><b>El caso de $148,000</b> es ilustrativo. Las preguntas del debate son de Andrés Trejo.</li>
+          <li><b>El caso de $148,000</b> es ilustrativo. Las preguntas del debate vienen de la invitación al taller.</li>
         </ul>`,
       notes: `<p class="dir">[No proyectar. Está para el PDF y la versión web.]</p>`,
     },

@@ -11,7 +11,7 @@ from playwright.sync_api import sync_playwright
 DECK = Path(__file__).resolve().parents[1]
 OUT = Path(sys.argv[1] if len(sys.argv) > 1 else DECK / '.shots/deck.pdf').resolve()
 ALL_STEPS = {'lab-casos'}  # each step is its own content
-EXTRA = {'supervision': [2]}  # earlier steps worth a page of their own (the fraud case)
+EXTRA = {'supervision': [2], 'contexto': [1], 'agente-control': [2], 'revote': [0]}  # earlier steps worth a page of their own (the fraud case)
 chrome = os.environ.get('CHROME') or shutil.which('google-chrome') or shutil.which('chromium')
 
 with sync_playwright() as p, tempfile.TemporaryDirectory() as tmp:

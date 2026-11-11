@@ -40,11 +40,21 @@
     #s-carver .uses { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 40px; }
     #s-carver .uses .chip { font-size: 24px; }
 
+    #s-caso { padding-top: 110px; }
+    #s-caso .k-amt { font-size: 190px; font-weight: 500; letter-spacing: -0.045em; line-height: 1; margin-top: 18px; }
+    #s-caso .k-amt small { display: block; font-size: 38px; color: var(--dim); letter-spacing: 0; margin-top: 16px; font-weight: 400; }
+    #s-caso .k-sig { list-style: none; padding: 0; margin: 44px 0 0; width: 860px; }
+    #s-caso .k-sig li { font-size: 38px; padding: 12px 0; border-top: 2px solid var(--hair); display: flex; justify-content: space-between; }
+    #s-caso .k-sig li:last-child { border-bottom: 2px solid var(--hair); }
+    #s-caso .k-sig .v { font-family: var(--mono); font-size: 26px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bad); align-self: center; }
+    #s-caso .k-sig .v.ok { color: var(--good); }
+    #s-caso .k-vote { position: absolute; left: 1100px; right: var(--pad-x); top: 470px; font-size: 80px; line-height: 1.08; letter-spacing: -0.025em; font-weight: 500; }
+    #s-caso .k-vote .t-label { display: block; margin-bottom: 20px; color: var(--accent); font-weight: 400; }
     #s-mapa .steps { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 40px; margin-top: 8px; }
     #s-mapa .st { border-top: 3px solid var(--faint); padding-top: 28px; }
     #s-mapa .st.on { border-top-color: var(--accent); }
     #s-mapa .st .n { font-family: var(--mono); font-size: 24px; letter-spacing: 0.24em; color: var(--accent); }
-    #s-mapa .st h3 { font-size: 64px; font-weight: 500; letter-spacing: -0.02em; margin: 14px 0 12px; }
+    #s-mapa .st h3 { font-size: 56px; font-weight: 500; letter-spacing: -0.02em; margin: 14px 0 12px; }
     #s-mapa .st p { font-size: 32px; color: var(--dim); margin: 0; line-height: 1.3; }
     #s-mapa .tmpl { margin-top: 72px; display: flex; gap: 0; align-items: stretch; }
     #s-mapa .tmpl .cell { flex: 1; border: var(--stroke) solid var(--faint); padding: 26px 32px; }
@@ -141,21 +151,44 @@
       html: `
         <div class="t-label" style="margin-bottom:40px">Cómo va a funcionar</div>
         <div class="steps">
-          <div class="st on"><div class="n">01</div><h3>6 conceptos</h3><p>El vocabulario mínimo</p></div>
-          <div class="st" data-step="1"><div class="n">02</div><h3>Laboratorio</h3><p>Ustedes votan casos reales</p></div>
+          <div class="st on"><div class="n">01</div><h3>1 caso, 6 conceptos</h3><p>La misma transferencia, vista seis veces</p></div>
+          <div class="st" data-step="1"><div class="n">02</div><h3>Laboratorio</h3><p>Ustedes deciden quién aprueba</p></div>
           <div class="st" data-step="1"><div class="n">03</div><h3>Debate</h3><p>Con Christian, sin piedad</p></div>
         </div>
         <div class="tmpl" data-step="2">
-          <div class="cell"><div class="t-label">Qué es</div><div>Una línea</div></div>
-          <div class="cell"><div class="t-label">En el banco</div><div>Un ejemplo</div></div>
-          <div class="cell acc"><div class="t-label accent">Para debatir</div><div>Una pregunta</div></div>
+          <div class="cell"><div class="t-label">Definición</div><div>Formal, sin adornos</div></div>
+          <div class="cell"><div class="t-label">En el caso</div><div>Qué cambia en la transferencia</div></div>
+          <div class="cell acc"><div class="t-label accent">Para debatir</div><div>Una pregunta abierta</div></div>
         </div>`,
       notes: `
-        <p>Esto es un taller, no una conferencia, así que va así. Primero, seis conceptos: el vocabulario mínimo para hablar de agentes en un banco sin que cada quien entienda una cosa distinta.</p>
+        <p>Esto es un taller, no una conferencia, así que va así. Primero, un solo caso y seis conceptos. Voy a usar la misma transferencia bancaria todo el tiempo, y cada concepto le agrega una capa.</p>
         <p class="dir">[Clic.]</p>
-        <p>Luego un laboratorio: les pongo casos y ustedes votan con la mano. Y al final, debate con Christian, que ha estado del lado del banco en open banking y onboarding digital, así que tiene opiniones.</p>
+        <p>Luego un laboratorio, donde ustedes deciden quién aprueba qué. Y al final, debate con Christian, que ha estado del lado del banco en open banking y onboarding digital, así que tiene opiniones.</p>
         <p class="dir">[Clic.]</p>
-        <p>Cada concepto trae tres cosas: qué es, en una línea; cómo se ve en un banco; y una pregunta para pelearnos. Apunten las preguntas que les incomoden, porque esas las vamos a usar al final. Empecemos por la más básica: ¿qué es un agente?</p>`,
+        <p>Cada concepto trae una definición formal. No les voy a simplificar de más: ustedes leen leyes, pueden con una definición. Luego qué cambia en el caso, y una pregunta que no tengo resuelta. Empecemos por el caso.</p>`,
+    },
+    {
+      id: 'caso',
+      title: 'El caso · primera votación',
+      time: 150,
+      particles: [{ shape: 'scatter', opacity: 0.2 }, { shape: 'split', opacity: 0.3 }],
+      label: 'El caso',
+      html: `
+        <div class="t-label">El caso · 23:40 de un viernes</div>
+        <div class="k-amt">$148,000<small>MXN · transferencia a una cuenta nueva</small></div>
+        <ul class="k-sig">
+          <li>SIM <span class="v">⚠ cambió hoy</span></li>
+          <li>Dispositivo <span class="v">⚠ nuevo hoy</span></li>
+          <li>Ubicación <span class="v">⚠ otra ciudad</span></li>
+          <li>Código por SMS <span class="v ok">✓ correcto</span></li>
+        </ul>
+        <div class="k-vote" data-step="1"><span class="t-label">Primera votación</span>¿La frenas<br>o la dejas pasar?</div>
+        <div class="cite foot">Caso ilustrativo. No es un cliente real.</div>`,
+      notes: `
+        <p>Viernes, 11:40 de la noche. Una transferencia de 148 mil pesos a una cuenta a la que este cliente nunca le había mandado dinero. El cliente cambió de SIM hoy, estrenó celular hoy y está en otra ciudad. Pero el código que le llegó por SMS lo metió bien.</p>
+        <p class="dir">[Clic. Manos arriba: ¿quién la frena? ¿Quién la deja pasar? Contar en voz alta y decir el número.]</p>
+        <p>Acuérdense de su voto, porque al final vamos a votar otra vez. Un detalle para los que la dejaron pasar: el código llega por SMS. Si te cambiaron la SIM, el SMS le llega al que la tiene. Y un detalle para los que la frenaron: también puede ser alguien que se mudó y estrenó teléfono.</p>
+        <p>Hoy esto lo decide una regla o un analista. La pregunta del taller es qué cambia si lo ve un agente. Entonces: ¿qué es un agente?</p>`,
     },
   ]);
 })();

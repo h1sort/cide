@@ -1,6 +1,6 @@
 # cide · Carlos Haro's taller at CIDE (Diplomado Fintech)
 
-Current talk: **¿De qué hablamos cuando hablamos de banca agéntica?** (Nov 11, 2026). Read `PLAN.md` first; it is the source of truth for structure, timing and sources.
+Current talk: **What We Talk About When We Talk About Agentic Banking** (Nov 11, 2026). Read `PLAN.md` first; it is the source of truth for structure, timing and sources.
 
 The deck shell (`deck/engine.js`, `particles.js`, `styles.css`) is copied from `h1sort/datapub`; `deck/CONTRACT.md` there documents the slide API. Keep the two in sync by hand if the engine changes.
 

@@ -9,7 +9,7 @@
     #s-title:not([data-at="0"]) .a0-name .strike::after { transform: scaleX(1); }
     #s-title .a0-name .new { color: var(--accent); }
     #s-title .a0-name .swap { display: inline-grid; }
-    #s-title .a0-name .swap > * { grid-area: 1 / 1; }
+    #s-title .a0-name .swap > * { grid-area: 1 / 1; justify-self: start; }
     #s-title .a0-by { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
     #s-title .a0-by .bar { width: 64px; height: 2px; background: var(--faint); }
 
@@ -57,20 +57,20 @@
   Deck.act(0, 'Apertura', [
     {
       id: 'title',
-      title: '¿De qué hablamos cuando hablamos de banca agéntica?',
+      title: 'What We Talk About When We Talk About Agentic Banking',
       time: 30,
       class: 'middle',
       particles: { shape: 'scatter', opacity: 0.3 },
       label: '',
       html: `
         <div class="t-label a0-ep">Taller · IA y Fintech en acción</div>
-        <h1 class="a0-name">¿De qué hablamos cuando hablamos de
-          <span class="swap"><span class="strike" data-step-hide="2">amor</span><span class="new" data-step="2">banca agéntica</span></span>?</h1>
+        <h1 class="a0-name">What We Talk About When We Talk About
+          <span class="swap"><span class="strike" data-step-hide="2">Love</span><span class="new" data-step="2">Agentic Banking</span></span></h1>
         <div class="a0-by t-label"><span>Carlos Haro</span><span class="bar"></span><span>Facilita Christian García</span><span class="bar"></span><span>CIDE · 11 nov 2026</span></div>`,
       notes: `
-        <p class="dir">[Arranca con "amor". Clic 1: se tacha. Clic 2: aparece "banca agéntica".]</p>
+        <p class="dir">[Arranca con "Love". Clic 1: se tacha. Clic 2: aparece "Agentic Banking".]</p>
         <p>Buenas tardes. Gracias al CIDE, a Jorge Luis y a Andrés por la invitación, y a Christian, que me va a ayudar a que esto no sea un monólogo.</p>
-        <p>El título es un robo descarado. Hay un cuento de Raymond Carver que se llama "De qué hablamos cuando hablamos de amor". Yo nomás le cambié una palabra.</p>
+        <p>El título es un robo descarado. Hay un cuento de Raymond Carver que se llama "What We Talk About When We Talk About Love", "De qué hablamos cuando hablamos de amor". Yo nomás le cambié una palabra. Lo dejé en inglés por respeto a Carver.</p>
         <p class="dir">[Clic, clic.]</p>
         <p>Y créanme que la palabra que puse es igual de difícil de definir. Pero antes, déjenme decirles quién soy, para que sepan desde dónde les hablo.</p>`,
     },

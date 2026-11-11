@@ -1,4 +1,4 @@
-# ¿De qué hablamos cuando hablamos de banca agéntica?
+# What We Talk About When We Talk About Agentic Banking
 
 **Taller "IA y Fintech en acción: del algoritmo al negocio financiero"** · Diplomado Innovación, Regulación y Nuevos Modelos de Negocio en Tecnología Financiera (Fintech), 1a edición · CIDE, Auditorio Cuajimalpa, Santa Fe · Wed Nov 11, 2026 · 17:30 · in person only.
 Imparte Carlos Haro (AI Engineer, Santander México). Facilita Christian García (student of the Diplomado; SVP Digital Solutions at Banamex, ex Open Banking lead).

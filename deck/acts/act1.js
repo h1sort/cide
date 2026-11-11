@@ -19,16 +19,16 @@
     .c-h3 { font-size: 80px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.04; margin: 0 0 8px; }
     .mono-f { font-family: var(--mono); letter-spacing: 0; }
 
-    /* 01 agente */
-    #s-agente .loop { position: absolute; left: var(--pad-x); right: var(--pad-x); top: 500px; display: flex; align-items: stretch; gap: 0; }
-    #s-agente .loop .b { flex: 1; border: var(--stroke) solid var(--faint); border-radius: 16px; padding: 22px 22px 24px; font-size: 32px; line-height: 1.2; }
-    #s-agente .loop .b .t-label { display: block; font-size: 20px; margin-bottom: 10px; letter-spacing: 0.2em; }
-    #s-agente .loop .b.acc { border-color: var(--accent); }
-    #s-agente .loop .b.acc .t-label { color: var(--accent); }
-    #s-agente .loop .ar { flex: none; width: 44px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 30px; color: var(--faint); }
-    #s-agente .back { position: absolute; left: var(--pad-x); right: var(--pad-x); top: 690px; height: 40px; border: var(--stroke) solid var(--hair); border-top: 0; border-radius: 0 0 16px 16px; }
-    #s-agente .back span { position: absolute; left: 50%; transform: translateX(-50%); bottom: -16px; background: #000; padding: 0 18px; font-family: var(--mono); font-size: 22px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); }
-    #s-agente .maxim { position: absolute; left: var(--pad-x); right: 420px; top: 800px; font-size: 56px; letter-spacing: -0.02em; line-height: 1.1; }
+    /* 01 agente: the loop is an ellipse; the particle field flows around it (shape c-loop) */
+    #s-agente .lp { position: absolute; inset: 0; }
+    #s-agente .lp .chev { fill: var(--faint); }
+    #s-agente .nd { position: absolute; width: 370px; height: 104px; margin: -52px 0 0 -185px; background: #000; border: var(--stroke) solid var(--faint); border-radius: 16px; padding: 16px 22px; font-size: 30px; line-height: 1.15; white-space: nowrap; }
+    #s-agente .nd .t-label { display: block; font-size: 20px; margin-bottom: 8px; letter-spacing: 0.2em; }
+    #s-agente .nd.acc { border-color: var(--accent); box-shadow: 0 0 0 6px var(--accent-dim); }
+    #s-agente .nd.acc .t-label { color: var(--accent); }
+    #s-agente .in { position: absolute; left: 290px; top: 494px; font-family: var(--mono); font-size: 22px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dim); }
+    #s-agente .maxim { position: absolute; left: 520px; width: 880px; top: 660px; text-align: center; font-size: 44px; letter-spacing: -0.02em; line-height: 1.15; }
+    #s-agente .c-def { max-width: 1500px; }
 
     /* 01b control */
     #s-agente-control .c-two { top: 250px; }
@@ -62,15 +62,24 @@
     #s-herramientas .case b { color: var(--fg); font-weight: 500; }
 
     /* 02b compuerta */
-    #s-compuerta .gate { display: flex; align-items: center; gap: 16px; margin-top: 40px; flex-wrap: nowrap; white-space: nowrap; }
+    #s-compuerta .gate { display: flex; align-items: center; gap: 16px; margin-top: 30px; flex-wrap: nowrap; white-space: nowrap; }
     #s-compuerta .gate .lhs { font-family: var(--mono); font-size: 34px; }
     #s-compuerta .gate .p { border: var(--stroke) solid var(--faint); border-radius: 14px; padding: 14px 22px; font-size: 34px; }
     #s-compuerta .gate .p.neg { border-color: var(--accent); color: var(--accent); }
     #s-compuerta .gate .op { font-family: var(--mono); font-size: 28px; color: var(--faint); letter-spacing: 0.1em; }
-    #s-compuerta .l1 { font-size: 72px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.08; margin: 64px 0 0; max-width: 1500px; }
-    #s-compuerta .l2 { font-size: 40px; line-height: 1.25; color: var(--dim); margin: 28px 0 0; max-width: 1500px; }
+    #s-compuerta .tok { margin-top: 44px; }
+    #s-compuerta .tok .row2 { display: grid; grid-template-columns: 580px 350px 290px 250px 1fr; align-items: center; border-top: 2px solid var(--hair); padding: 18px 0; font-family: var(--mono); font-size: 25px; }
+    #s-compuerta .tok .row2:last-child { border-bottom: 2px solid var(--hair); }
+    #s-compuerta .tok .act { font-size: 27px; color: var(--fg); }
+    #s-compuerta .tok .y { color: var(--good); }
+    #s-compuerta .tok .n { color: var(--bad); }
+    #s-compuerta .tok .z { color: var(--faint); }
+    #s-compuerta .tok .res { justify-self: end; border: var(--stroke) solid var(--good); color: var(--good); border-radius: 999px; padding: 6px 18px; letter-spacing: 0.1em; text-transform: uppercase; font-size: 22px; }
+    #s-compuerta .tok .no .res { border-color: var(--bad); color: var(--bad); }
+    #s-compuerta .l1 { font-size: 72px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.08; margin: 54px 0 0; max-width: 1600px; }
+    #s-compuerta .l2 { font-size: 36px; line-height: 1.25; color: var(--dim); margin: 20px 0 0; max-width: 1500px; }
     #s-compuerta .l2 b { color: var(--fg); font-weight: 500; }
-    #s-compuerta .qq { position: absolute; left: var(--pad-x); right: 420px; top: 760px; }
+    #s-compuerta .qq { position: absolute; left: var(--pad-x); right: 420px; top: 770px; }
     #s-compuerta .qq .c-box { padding: 20px 30px 24px; }
     #s-compuerta .qq .c-box .tx { font-size: 36px; }
 
@@ -89,22 +98,27 @@
     #s-contexto .alt .c-box { min-height: 330px; }
     #s-contexto .memo { font-family: var(--mono); font-size: 26px; line-height: 1.4; margin-top: 16px; padding: 14px 18px; border: var(--stroke) dashed var(--bad); border-radius: 10px; color: var(--bad); }
 
-    /* 03b art-76 */
+    /* 03b art-76: three stacked planes; particles (c-layers) are the data that flows on each */
     #s-art-76 h2 { font-size: 84px; font-weight: 500; letter-spacing: -0.025em; margin: 0 0 12px; line-height: 1.05; }
-    #s-art-76 .layers { margin-top: 36px; display: grid; gap: 0; }
-    #s-art-76 .ly { display: grid; grid-template-columns: 90px 1fr 340px; align-items: center; padding: 20px 0; border-top: 2px solid var(--hair); }
+    #s-art-76 .iso { position: absolute; inset: 0; }
+    #s-art-76 .iso .pl { fill: rgba(0,0,0,0.55); stroke-width: 2.5; }
+    #s-art-76 .iso .p1 { stroke: var(--good); fill: rgba(126,224,161,0.07); }
+    #s-art-76 .iso .p2, #s-art-76 .iso .p3 { stroke: var(--accent); stroke-dasharray: 10 9; }
+    #s-art-76 .iso .rod { stroke: var(--hair); stroke-width: 1.5; }
+    #s-art-76 .layers { position: absolute; left: 800px; right: var(--pad-x); top: 355px; }
+    #s-art-76 .ly { display: grid; grid-template-columns: 70px 1fr 300px; align-items: center; height: 150px; border-top: 2px solid var(--hair); }
     #s-art-76 .ly:last-child { border-bottom: 2px solid var(--hair); }
     #s-art-76 .ly .n { font-family: var(--mono); font-size: 24px; letter-spacing: 0.2em; color: var(--dim); }
-    #s-art-76 .ly .nm { font-size: 44px; letter-spacing: -0.01em; }
-    #s-art-76 .ly .nm small { display: block; font-size: 28px; color: var(--dim); margin-top: 4px; }
-    #s-art-76 .ly .st { justify-self: end; font-family: var(--mono); font-size: 24px; letter-spacing: 0.16em; text-transform: uppercase;
-      border: var(--stroke) solid var(--faint); border-radius: 999px; padding: 8px 22px; color: var(--dim); }
+    #s-art-76 .ly .nm { font-size: 42px; letter-spacing: -0.01em; }
+    #s-art-76 .ly .nm small { display: block; font-size: 27px; color: var(--dim); margin-top: 4px; }
+    #s-art-76 .ly .st { justify-self: end; font-family: var(--mono); font-size: 23px; letter-spacing: 0.16em; text-transform: uppercase;
+      border: var(--stroke) solid var(--faint); border-radius: 999px; padding: 8px 20px; color: var(--dim); }
     #s-art-76 .ly .st.ok { border-color: var(--good); color: var(--good); }
     #s-art-76 .ly .st.no { border-color: var(--accent); color: var(--accent); }
     #s-art-76 .ly.hot .nm { color: var(--accent); }
-    #s-art-76 .after { margin-top: 30px; font-size: 36px; line-height: 1.28; max-width: 1340px; }
+    #s-art-76 .after { position: absolute; left: var(--pad-x); right: 440px; top: 838px; font-size: 33px; line-height: 1.26; }
     #s-art-76 .after .dim { display: block; }
-    #s-art-76 .foot2 { position: absolute; left: var(--pad-x); right: 440px; bottom: 100px; font-family: var(--mono); font-size: 20px; color: var(--faint); letter-spacing: 0.03em; }
+    #s-art-76 .foot2 { position: absolute; left: var(--pad-x); right: 440px; bottom: 92px; font-family: var(--mono); font-size: 20px; color: var(--faint); letter-spacing: 0.03em; }
 
     /* 04 autonomia */
     #s-autonomia .mx { position: absolute; left: var(--pad-x); right: var(--pad-x); top: 385px; display: grid; grid-template-columns: 520px repeat(3, 1fr); }
@@ -124,19 +138,26 @@
     #s-autonomia .qq .c-box .tx { font-size: 34px; }
     #s-autonomia .c-def { max-width: 1100px; }
 
-    /* 05 supervision */
-    #s-supervision .nums { position: absolute; left: var(--pad-x); right: var(--pad-x); top: 420px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-    #s-supervision .nums > div { border-top: 3px solid var(--faint); padding-top: 18px; }
-    #s-supervision .nums .big { font-size: 150px; font-weight: 500; letter-spacing: -0.04em; line-height: 1; }
-    #s-supervision .nums .cap { font-size: 32px; color: var(--dim); margin-top: 10px; line-height: 1.25; }
-    #s-supervision .nums .bad2 { border-top-color: var(--accent); }
-    #s-supervision .nums .bad2 .big { color: var(--accent); }
-    #s-supervision .sup { position: absolute; left: var(--pad-x); top: 368px; }
-    #s-supervision .concl { position: absolute; left: var(--pad-x); right: 420px; top: 735px; font-size: 64px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.08; }
-    #s-supervision .assume { position: absolute; left: var(--pad-x); right: 440px; top: 880px; font-family: var(--mono); font-size: 20px; color: var(--faint); letter-spacing: 0.03em; line-height: 1.4; }
+    /* 05 supervision: 1,000 dots = 100,000 transfers; the flagged ones fly out into a row */
+    #s-supervision .dots { position: absolute; inset: 0; transition: opacity .4s var(--ease); }
+    #s-supervision .dots circle { fill: var(--faint); opacity: 0.6; transform-box: fill-box; transform-origin: center;
+      transition: transform 1.2s var(--ease), fill .5s var(--ease), opacity .6s var(--ease); }
+    #s-supervision:not([data-at="0"]) .dots .fr { fill: var(--bad); opacity: 1; transform: scale(2.6); }
+    #s-supervision[data-at="2"] .dots .fp { fill: var(--accent); opacity: 1; }
+    #s-supervision[data-at="2"] .dots .fl { transform: translate(var(--tx), var(--ty)) scale(3.2); }
+    #s-supervision[data-at="2"] .dots circle:not(.fl) { opacity: 0.2; }
+    #s-supervision[data-at="3"] .dots { opacity: 0; }
+    #s-supervision .rp { position: absolute; left: 1150px; right: var(--pad-x); }
+    #s-supervision .rp.a { top: 418px; }
+    #s-supervision .rp.b { top: 462px; font-size: 44px; letter-spacing: -0.015em; }
+    #s-supervision .rp.b b { color: var(--bad); font-weight: 500; }
+    #s-supervision .rp.c { top: 560px; }
+    #s-supervision .rp.d { top: 690px; font-size: 44px; letter-spacing: -0.015em; line-height: 1.15; }
+    #s-supervision .concl { position: absolute; left: var(--pad-x); right: 420px; top: 806px; font-size: 58px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.08; }
+    #s-supervision .assume { position: absolute; left: var(--pad-x); right: 440px; top: 888px; font-family: var(--mono); font-size: 20px; color: var(--faint); letter-spacing: 0.03em; line-height: 1.4; }
     #s-supervision .qq { position: absolute; left: var(--pad-x); right: var(--pad-x); top: 400px; }
-    #s-supervision .nums, #s-supervision .sup { transition: opacity .4s var(--ease); }
-    #s-supervision[data-at="3"] .nums, #s-supervision[data-at="3"] .sup { opacity: 0; }
+    #s-supervision .rp { transition: opacity .4s var(--ease); }
+    #s-supervision[data-at="3"] .rp { opacity: 0; }
 
     /* 05b tiempos */
     #s-supervision-tiempos h2 { font-size: 84px; font-weight: 500; letter-spacing: -0.025em; margin: 0; line-height: 1.05; }
@@ -175,6 +196,44 @@
     #s-responsabilidad-marco .qq .c-box .tx { font-size: 33px; }
   `);
 
+  // Agent loop geometry (must match the c-loop particle shape in act0.js).
+  const LP = { x: 960, y: 690, rx: 640, ry: 170 };
+  const chev = (deg) => {
+    const a = deg * Math.PI / 180, x = LP.x + LP.rx * Math.cos(a), y = LP.y + LP.ry * Math.sin(a);
+    const rot = Math.atan2(LP.ry * Math.cos(a), -LP.rx * Math.sin(a)) * 180 / Math.PI;
+    return `<polygon class="chev" points="-12,-9 12,0 -12,9" transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${rot.toFixed(1)})"/>`;
+  };
+  const loopSvg = `<svg class="lp" viewBox="0 0 1920 1080" width="1920" height="1080" data-step="1">
+      <ellipse class="ln-hair" cx="${LP.x}" cy="${LP.y}" rx="${LP.rx}" ry="${LP.ry}"/>
+      ${[212, 328, 32, 148].map(chev).join('')}
+      <path class="ln-dim" d="M640 508 H752"/><polygon class="chev" points="752,499 770,508 752,517"/>
+    </svg>`;
+
+  // Base rate: 1,000 dots, each 100 transfers. 1 is fraud; the detector also flags 10 honest ones.
+  const dotsSvg = (() => {
+    const cols = 50, sp = 19, x0 = 126, y0 = 424, fraud = 7 * cols + 31;
+    const fp = [63, 148, 271, 402, 455, 590, 644, 733, 871, 952];
+    const order = [fraud, ...fp];
+    let out = '';
+    for (let i = 0; i < 1000; i++) {
+      const cx = x0 + (i % cols) * sp, cy = y0 + Math.floor(i / cols) * sp, j = order.indexOf(i);
+      const cls = i === fraud ? 'fr fl' : (j > 0 ? 'fp fl' : '');
+      const st = j >= 0 ? ` style="--tx:${1166 + j * 58 - cx}px;--ty:${640 - cy}px"` : '';
+      out += `<circle${cls ? ` class="${cls}"` : ''} cx="${cx}" cy="${cy}" r="5"${st}/>`;
+    }
+    return `<svg class="dots" viewBox="0 0 1920 1080" width="1920" height="1080">${out}</svg>`;
+  })();
+
+  const isoSvg = (() => {
+    const d = (cy) => `${440 - 280},${cy} 440,${cy - 90} ${440 + 280},${cy} 440,${cy + 90}`;
+    return `<svg class="iso" viewBox="0 0 1920 1080" width="1920" height="1080">
+      <line class="rod" x1="160" y1="430" x2="160" y2="730"/><line class="rod" x1="720" y1="430" x2="720" y2="730"/><line class="rod" x1="440" y1="520" x2="440" y2="820"/>
+      <polygon class="pl p3" data-step="2" points="${d(730)}"/>
+      <polygon class="pl p2" data-step="2" points="${d(580)}"/>
+      <polygon class="pl p1" data-step="1" points="${d(430)}"/>
+    </svg>`;
+  })();
+
   const head = (n, word) => `<div class="c-head"><div class="t-label">Concepto ${n} · de 06</div><h2>${word}</h2></div>`;
   const preg = (tx, step, src = '') => `<div class="qq" data-step="${step}"><div class="c-box q"><div class="t-label">Para debatir</div><div class="tx">${tx}</div>${src ? `<div class="src">${src}</div>` : ''}</div></div>`;
 
@@ -184,25 +243,23 @@
       title: '01 · Agente · definición y ciclo',
       time: 180,
       class: 'c-slide',
-      particles: { shape: 'ring', opacity: 0.16 },
+      particles: [{ shape: 'c-loop', opacity: 0.22 }, { shape: 'c-loop', opacity: 0.7 }, { shape: 'c-loop', opacity: 0.7 }],
       counter: '01 / 06',
       html: `
         ${head('01', 'Agente')}
         <p class="c-def">Un sistema que <em>elige acciones</em> a partir de observaciones, persiguiendo un objetivo.</p>
         <div class="c-src">Definición: CMU 11-768, AI Agents (Fried y Neubig, 2026)</div>
-        <div class="loop" data-step="1">
-          <div class="b"><span class="t-label">Entrada</span>Objetivo y contexto</div><div class="ar">→</div>
-          <div class="b"><span class="t-label">Modelo</span>Propone una acción</div><div class="ar">→</div>
-          <div class="b acc"><span class="t-label">Sistema</span>Valida y autoriza</div><div class="ar">→</div>
-          <div class="b"><span class="t-label">Herramienta</span>Ejecuta</div><div class="ar">→</div>
-          <div class="b"><span class="t-label">Observación</span>Regresa el resultado</div>
-        </div>
-        <div class="back" data-step="1"><span>se repite hasta terminar</span></div>
-        <div class="maxim" data-step="2">El modelo propone. <em>El sistema dispone.</em></div>`,
+        ${loopSvg}
+        <div class="in" data-step="1">Objetivo y contexto</div>
+        <div class="nd" style="left:${LP.x}px;top:${LP.y - LP.ry}px" data-step="1"><span class="t-label">Modelo</span>Propone una acción</div>
+        <div class="nd acc" style="left:${LP.x + LP.rx}px;top:${LP.y}px" data-step="1"><span class="t-label">Sistema</span>Valida y autoriza</div>
+        <div class="nd" style="left:${LP.x}px;top:${LP.y + LP.ry}px" data-step="1"><span class="t-label">Herramienta</span>Ejecuta</div>
+        <div class="nd" style="left:${LP.x - LP.rx}px;top:${LP.y}px" data-step="1"><span class="t-label">Observación</span>Regresa el resultado</div>
+        <div class="maxim" data-step="2">El modelo propone.<br><em>El sistema dispone.</em></div>`,
       notes: `
         <p>Concepto uno. La definición que uso es la del curso de agentes de Carnegie Mellon de este semestre: un agente es un sistema que elige acciones a partir de observaciones, persiguiendo un objetivo. Fíjense en el verbo: elige.</p>
         <p class="dir">[Clic: el ciclo.]</p>
-        <p>Por dentro es un ciclo. Entra un objetivo y un contexto. El modelo de lenguaje propone una acción. Un sistema alrededor, que es software normal, la valida y la autoriza. Una herramienta la ejecuta. El resultado regresa como observación, y otra vez.</p>
+        <p>Por dentro es un ciclo, y los puntitos lo están recorriendo. Entra un objetivo y un contexto. El modelo de lenguaje propone una acción. Un sistema alrededor, que es software normal, la valida y la autoriza. Una herramienta la ejecuta. El resultado regresa como observación, y otra vez.</p>
         <p class="dir">[Clic.]</p>
         <p>Y esto es lo más importante de hoy: el modelo nunca toca el banco. El modelo solo escribe texto que pide una acción. Quien la ejecuta, o no, es el sistema. El modelo propone, el sistema dispone. Casi todo lo regulable vive en esa caja amarilla. Ahora, ¿en qué se distingue esto de la automatización de siempre?</p>`,
     },
@@ -285,15 +342,19 @@
           <span class="p">precondiciones verificadas</span><span class="op">Y</span>
           <span class="p neg">no prohibida</span>
         </div>
-        <p class="l1" data-step="1">La ausencia de prohibición <em>no es</em> un permiso.</p>
-        <p class="l2" data-step="2">Escribir la regla en las instrucciones del modelo cambia <b>lo que el modelo lee</b>. No cambia <b>lo que el sistema permite</b>.</p>
+        <div class="tok" data-step="1">
+          <div class="row2"><span class="act">retener_transferencia(30 min)</span><span class="y">✓ en el mandato</span><span class="y">✓ precondiciones</span><span class="y">✓ no prohibida</span><span class="res">se ejecuta</span></div>
+          <div class="row2 no"><span class="act">liberar_transferencia($148,000)</span><span class="n">✗ fuera del mandato</span><span class="z">no se evalúa</span><span class="z">no se evalúa</span><span class="res">se detiene</span></div>
+        </div>
+        <p class="l1" data-step="2">La ausencia de prohibición <em>no es</em> un permiso.</p>
+        <p class="l2" data-step="2">Y una regla escrita en el prompt <b>no es una compuerta</b>: cambia lo que el modelo lee, no lo que el sistema permite.</p>
         ${preg('Cuando el agente actúa, ¿con qué facultades lo hace: las del cliente, las del banco o unas propias?', 3, 'Compuerta de ejecución: adaptado de CMU 11-768 (2026)')}`,
       notes: `
         <p>La compuerta es una conjunción de tres condiciones. Una acción se ejecuta si está dentro del mandato, o sea, alguien la autorizó expresamente para esta tarea; si sus precondiciones están verificadas con evidencia fresca; y si no está prohibida.</p>
+        <p class="dir">[Clic: las dos solicitudes del caso.]</p>
+        <p>En el caso, el modelo pide dos cosas. Retener treinta minutos: está en su mandato, la operación sigue pendiente, nadie lo prohíbe. Pasa. Liberar los 148 mil: no está en su mandato. Se detiene ahí, y ni siquiera se evalúa lo demás. No importa qué tan convencido esté el modelo.</p>
         <p class="dir">[Clic.]</p>
-        <p>Son tres y no una porque la ausencia de prohibición no es un permiso. A los abogados les va a sonar: facultades expresas. Si le dije "organiza esta carpeta", leer otra carpeta no está prohibido, pero tampoco está en el mandato.</p>
-        <p class="dir">[Clic.]</p>
-        <p>Y el error más común que veo: poner la regla en el prompt. "No transfieras más de 50 mil". Eso cambia lo que el modelo lee, y el modelo puede ignorarlo o ser engañado. La regla tiene que vivir en el sistema, donde el modelo no la puede brincar.</p>
+        <p>Son tres condiciones y no una porque la ausencia de prohibición no es un permiso. A los abogados les va a sonar: facultades expresas. Y el error más común que veo es poner la regla en el prompt. Eso cambia lo que el modelo lee, y el modelo puede ignorarlo o ser engañado. La regla vive en el sistema, donde el modelo no la puede brincar.</p>
         <p class="dir">[Clic: la pregunta.]</p>
         <p>¿Mandato de quién? Esa se la dejo a ustedes. Para aplicar precondiciones, el agente necesita saber cosas.</p>`,
     },
@@ -334,11 +395,12 @@
       title: '03 · Contexto · Art. 76',
       time: 180,
       class: '',
-      particles: { shape: 'grid', opacity: 0.14 },
+      particles: { shape: 'c-layers', opacity: 0.6 },
       counter: '03 / 06',
       html: `
         <div class="t-label" style="margin-bottom:14px">Concepto 03 · quién puede leer · Ley Fintech, art. 76 (2018)</div>
         <h2>Tres capas de datos. <span class="accent">Solo una tiene reglas.</span></h2>
+        ${isoSvg}
         <div class="layers">
           <div class="ly" data-step="1"><span class="n">01</span><span class="nm">Datos financieros abiertos<small>productos, comisiones, cajeros, sucursales</small></span><span class="st ok">reglas 2020</span></div>
           <div class="ly" data-step="2"><span class="n">02</span><span class="nm">Datos agregados<small>estadísticas sin identificar al cliente</small></span><span class="st no">pendiente</span></div>
@@ -350,7 +412,7 @@
       notes: `
         <p>La respuesta legal ya existe, a medias. La Ley Fintech de 2018, artículo 76, obliga a compartir datos por interfaces estandarizadas, y define tres capas.</p>
         <p class="dir">[Clic.]</p>
-        <p>Datos abiertos: productos, comisiones, dónde están los cajeros. Esa capa tiene reglas desde 2020.</p>
+        <p>Datos abiertos: productos, comisiones, dónde están los cajeros. Esa capa tiene reglas desde 2020. Vean los puntitos: ahí sí fluyen datos.</p>
         <p class="dir">[Clic.]</p>
         <p>Datos agregados y datos transaccionales, que son tu historial compartido con tu autorización expresa: sin reglas secundarias. La ley daba 24 meses. Hay al menos dos amparos por la omisión, uno de 2023 y otro de finales de 2025, y hasta donde pude ver ninguno tiene sentencia. Los abogados de la sala conocen el estado mejor que yo, así que corríjanme.</p>
         <p class="dir">[Clic.]</p>
@@ -394,26 +456,26 @@
       title: '05 · Supervisión · la tasa base',
       time: 270,
       class: 'c-slide',
-      particles: [{ shape: 'scatter', opacity: 0.18 }, { shape: 'scatter', opacity: 0.18 }, { shape: 'split', opacity: 0.25 }, { shape: 'scatter', opacity: 0.12 }],
+      particles: 'none',
       counter: '05 / 06',
       html: `
         ${head('05', 'Supervisión')}
         <p class="c-def">Verificar que el sistema hace lo que debe, <em>antes, durante y después</em>.</p>
-        <div class="sup t-label" data-step="1">De cada 100,000 transferencias</div>
-        <div class="nums" data-step="1">
-          <div><div class="big">100</div><div class="cap">son fraude</div></div>
-          <div><div class="big">99</div><div class="cap">fraudes detectados</div></div>
-          <div class="bad2"><div class="big">999</div><div class="cap">clientes honestos frenados</div></div>
-        </div>
+        ${dotsSvg}
+        <div class="rp a t-label">1 punto = 100 transferencias</div>
+        <div class="rp b" data-step="1"><b>1 punto</b> es fraude.</div>
+        <div class="rp c t-label" data-step="2">Lo que marca el detector</div>
+        <div class="rp d" data-step="2">11 alertas.<br><em>10 son clientes honestos.</em></div>
         <div class="concl" data-step-hide="3"><div data-step="2">9 de cada 10 alertas son <em>clientes honestos</em>.</div></div>
-        <div class="assume" data-step-hide="3"><div data-step="1">Supuestos ilustrativos: 1 fraude por cada 1,000 operaciones; el detector atrapa 99% del fraude y se equivoca con 1% de las operaciones legítimas. 99 / (99 + 999) ≈ 9%.</div></div>
+        <div class="assume" data-step-hide="3"><div data-step="1">Supuestos ilustrativos: 1 fraude por cada 1,000; detecta 99% del fraude, falla con 1% de lo legítimo. Por cada 100,000: 99 y 999; 99 / 1,098 ≈ 9%.</div></div>
         ${preg('Mover el umbral no elimina el error: lo cambia de lado. ¿Qué error prefieres, frenar a un cliente honesto o dejar pasar un fraude? ¿Quién decide la proporción?', 3)}`,
       notes: `
         <p>Concepto cinco: supervisión. Verificar que el sistema hace lo que debe antes, durante y después. Empiezo por un número que casi todo mundo calcula mal.</p>
+        <p>Aquí hay mil puntos. Cada punto son cien transferencias: cien mil en total.</p>
         <p class="dir">[Clic.]</p>
-        <p>Supongan un detector excelente: atrapa 99% del fraude y se equivoca solo con 1% de los clientes honestos. Y supongan que una de cada mil transferencias es fraude. De cien mil, cien son fraude y atrapa 99. Pero el 1% de las otras 99,900 son 999 clientes honestos frenados.</p>
-        <p class="dir">[Clic.]</p>
-        <p>Nueve de cada diez alertas son clientes honestos. Con un detector de 99%. No es que el detector sea malo: es que el fraude es raro. Ojo, estos números son de un detector genérico; nuestro caso tenía tres señales juntas y su probabilidad es mucho más alta. Pero a escala, esta es la aritmética.</p>
+        <p>Supongan que una de cada mil es fraude. Ese es el punto rojo. Uno. Ahora supongan un detector excelente: atrapa 99% del fraude y se equivoca solo con 1% de los clientes honestos.</p>
+        <p class="dir">[Clic: salen volando las alertas.]</p>
+        <p>Esto es lo que marca. Atrapó el rojo, sí. Pero el 1% de los otros 999 puntos son diez puntos más. Once alertas, diez son clientes honestos. Con un detector de 99%. No es que el detector sea malo: es que el fraude es raro. Ojo, esto es un detector genérico; nuestro caso tenía tres señales juntas y su probabilidad es más alta. Pero a escala, esta es la aritmética.</p>
         <p class="dir">[Clic: la pregunta.]</p>
         <p>Por eso el agente no decide: arma el caso para que el analista resuelva esas mil alertas en dos minutos cada una. Y el umbral es una decisión de política, no técnica. Pero supervisar es más que el umbral.</p>`,
     },
